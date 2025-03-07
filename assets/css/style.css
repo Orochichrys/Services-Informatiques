@@ -29,6 +29,8 @@ header .banniere img {
 }
 
 header .banniere h1 {
+    font-size: 2rem;
+    align-items: center;
     color: white;
     text-align: center;
 }
