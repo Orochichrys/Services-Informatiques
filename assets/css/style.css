@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 999;
+}
+
+header .banniere {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 0;
+}
+
+header .banniere img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header .banniere h1 {
+    color: white;
+    text-align: center;
+}
+
+header .bouton-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+header .navbar {
+    width: 100%;
+}
+
+header .navbar .menu-generale {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+header .navbar .menu-generale li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+header .navbar .menu-generale li a:hover {
+    color: yellow;
+}
+
+header .navbar .menu-generale .deroulant {
+    position: relative;
+}
+
+header .navbar .menu-generale .menu-deroulant {
+    display: none;
+    position: absolute;
+    background-color: black;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    list-style: none;
+    padding: 0;
+    z-index: 1000;
+}
+
+header .navbar .menu-generale .deroulant:hover .menu-deroulant {
+    display: block;
+}
+
+header .navbar .menu-generale .menu-deroulant li a {
+    padding: 10px 15px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+header .navbar .menu-generale .menu-deroulant li a:hover {
+    background-color: yellow;
+    color: black;
+}
+main .contenu{
+    background: url('../img/ingenieur-informaticien-1608297187-35320.jpg') ;
+    height: 80vh;
+    position: relative;
+}
+/* main aside{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    height: 100vh;
+    background-color: black;
+} */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .navbar {
+        display: none;
+        position: absolute;
+        padding: 15px 5%;
+        left: 0;
+        top: 100%;
+        background-color: black;
+        height: auto;
+    }
+
+    header .navbar ul .menu-item{
+        border-bottom: 1px solid #eee;
+    }
+
+    header .navbar.active{
+        display: flex;
+    }
+
+    header .bouton-menu {
+        display: block;
+    }
+
+    .active{
+        display: flex;
+    }
+
+    header .navbar .menu-generale {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    header .navbar .menu-generale .menu-deroulant {
+        border: 1px solid yellow;
+        margin: 1rem;
+        position: static;
+        background: none;
+    }
+}
