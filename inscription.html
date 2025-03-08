@@ -1,13 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Informatiques - Inscription</title>
+    <title>Inscription - Services Informatiques</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Styles spécifiques à la page d'inscription */
+        .registration-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .form-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            background: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            background: yellow;
+            color: black;
+        }
+
+        .form-panel {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .form-panel.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: yellow;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 5px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Reprendre le même header que l'accueil -->
+    <header>
+        <!-- ... même code header que l'accueil ... -->
+    </header>
+
+    <main>
+        <section class="registration-container">
+            <h2>Devenez Partenaire</h2>
+            
+            <div class="form-tabs">
+                <button class="tab-button active" onclick="switchTab('client')">Client</button>
+                <button class="tab-button" onclick="switchTab('fournisseur')">Fournisseur</button>
+                <button class="tab-button" onclick="switchTab('partenaire')">Partenaire</button>
+            </div>
+
+            <!-- Formulaire Client -->
+            <form id="client-form" class="form-panel active">
+                <div class="form-group">
+                    <label>Nom complet :</label>
+                    <input type="text" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Secteur d'activité :</label>
+                    <select required>
+                        <option value="">Choisir...</option>
+                        <option>Banque/Finance</option>
+                        <option>Santé</option>
+                        <option>Éducation</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="cta-button">S'inscrire comme Client</button>
+            </form>
+
+            <!-- Formulaire Fournisseur -->
+            <form id="fournisseur-form" class="form-panel">
+                <div class="form-group">
+                    <label>Nom de l'entreprise :</label>
+                    <input type="text" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Type de services fournis :</label>
+                    <textarea required></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">S'inscrire comme Fournisseur</button>
+            </form>
+
+            <!-- Formulaire Partenaire -->
+            <form id="partenaire-form" class="form-panel">
+                <div class="form-group">
+                    <label>Type de partenariat :</label>
+                    <select required>
+                        <option value="">Choisir...</option>
+                        <option>Technologique</option>
+                        <option>Commercial</option>
+                        <option>Institutionnel</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Description du partenariat :</label>
+                    <textarea required></textarea>
+                </div>
+
+                <button type="submit" class="cta-button">Demander un partenariat</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        function switchTab(tabName) {
+            // Désactiver tous les onglets
+            document.querySelectorAll('.form-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Activer l'onglet sélectionné
+            document.getElementById(`${tabName}-form`).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Gestion de la soumission des formulaires
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Demande envoyée avec succès !\n(NOTE: Ceci est une simulation)');
+                form.reset();
+            });
+        });
+    </script>
 </body>
 </html>
