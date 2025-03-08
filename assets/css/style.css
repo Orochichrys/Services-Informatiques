@@ -5,15 +5,32 @@
     scroll-behavior: smooth;
 }
 
+:root{
+    /* Couleur principales */
+    --primaire-sombre:#0A192F;
+    --primaire-moyen:#172A45;
+    --primaire-léger:#2A4365;
+
+    /* Accents */
+    --accent-cyan:#64FFDA;
+    --accent-teal:#4ECDC4;
+    --accent-orange:#FF6B6B;
+
+    /* Textes */
+    --texte-primaire:#CCD6F6;
+    --texte-secondaire:#8892B0;
+
+}
+
 header {
-    background-color: black;
+    background-color: var(--primaire-sombre);
     display: flex;
     position: sticky;
     top: 0;
     flex-direction: column;
     align-items: center;
     padding: 15px 5%;
-    border-bottom: 2px solid yellow;
+    border-bottom: 2px solid var(--accent-orange);
     z-index: 999;
 }
 
@@ -33,7 +50,7 @@ header .banniere img {
 header .banniere h1 {
     font-size: 2rem;
     align-items: center;
-    color: white;
+    color: var(--texte-primaire);
     text-align: center;
 }
 
@@ -41,7 +58,7 @@ header .bouton-menu {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color: var(--texte-primaire);
     font-size: 2rem;
     cursor: pointer;
 }
@@ -61,13 +78,13 @@ header .navbar .menu-generale {
 header .navbar .menu-generale li a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: var(--texte-primaire);
     font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 header .navbar .menu-generale li a:hover {
-    color: yellow;
+    color: var(--accent-orange);
 }
 
 header .navbar .menu-generale .deroulant {
@@ -77,7 +94,7 @@ header .navbar .menu-generale .deroulant {
 header .navbar .menu-generale .menu-deroulant {
     display: none;
     position: absolute;
-    background-color: black;
+    background-color: var(--primaire-sombre);
     top: 100%;
     left: 0;
     min-width: 150px;
@@ -93,15 +110,16 @@ header .navbar .menu-generale .deroulant:hover .menu-deroulant {
 header .navbar .menu-generale .menu-deroulant li a {
     padding: 10px 15px;
     display: block;
-    color: white;
+    color: var(--texte-primaire);
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 header .navbar .menu-generale .menu-deroulant li a:hover {
-    background-color: yellow;
-    color: black;
+    background-color: var(--accent-orange);
+    color: var(--primaire-sombre);
 }
+
 /* Styles pour le menu latéral droit */
 aside {
     position: fixed;
@@ -111,9 +129,9 @@ aside {
     height: calc(100vh - 60px);
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
-    color: white;
-    border-left: 2px solid yellow;
-    z-index: 1000;
+    color: var(--texte-primaire);
+    border-left: 2px solid var(--accent-orange);
+    /* z-index: 1000; */
     overflow-y: auto;
 }
 
@@ -128,7 +146,7 @@ aside {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid yellow;
+    border: 2px solid var(--accent-orange);
     margin-bottom: 15px;
 }
 
@@ -147,15 +165,15 @@ aside {
     display: block;
     padding: 10px 15px;
     text-decoration: none;
-    color: black;
-    background-color: yellow;
+    color: var(--primaire-sombre);
+    background-color: var(--accent-orange);
     border-radius: 5px;
     text-align: center;
     transition: all 0.3s ease;
 }
 
 .magasin ul li a:hover {
-    background-color: #ffeb3b;
+    background-color: var(--accent-cyan);
 }
 
 /* Menu de navigation droit */
@@ -171,25 +189,24 @@ aside {
     align-items: center;
     gap: 10px;
     padding: 12px 15px;
-    color: white;
+    color: var(--texte-primaire);
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
 .menu-droit li a:hover {
-    background-color: yellow;
-    color: black;
+    background-color: var(--accent-orange);
+    color: var(--primaire-sombre);
 }
 
 .menu-droit i {
     font-size: 1.2rem;
 }
 
-
 footer {
-    background-color: black;
-    color: white;
+    background-color: var(--primaire-sombre);
+    color: var(--texte-primaire);
     text-align: center;
     padding: 20px;
     margin-top: auto;
@@ -207,12 +224,12 @@ footer {
         padding: 15px 5%;
         left: 0;
         top: 100%;
-        background-color: black;
+        background-color: var(--primaire-sombre);
         height: auto;
     }
 
     header .navbar ul .menu-item {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--texte-secondaire);
     }
 
     header .navbar.active {
@@ -229,7 +246,7 @@ footer {
     }
 
     header .navbar .menu-generale .menu-deroulant {
-        border: 1px solid yellow;
+        border: 1px solid var(--accent-orange);
         margin: 1rem;
         position: static;
         background: none;
@@ -248,5 +265,4 @@ footer {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
 }
