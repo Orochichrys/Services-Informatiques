@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -100,18 +101,105 @@ header .navbar .menu-generale .menu-deroulant li a:hover {
     background-color: yellow;
     color: black;
 }
-main .contenu{
-    background: url('../img/ingenieur-informaticien-1608297187-35320.jpg') ;
+/* Styles pour le menu latéral droit */
+aside {
+    position: fixed;
+    right: 0;
+    top: auto; /* Ajusté pour s'aligner sous le header */
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* Profil dans la sidebar */
+.profil-sidebar {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profil-sidebar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid yellow;
+    margin-bottom: 15px;
+}
+
+/* Liens du magasin */
+.magasin ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.magasin ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    background-color: yellow;
+    border-radius: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.magasin ul li a:hover {
+    background-color: #ffeb3b;
+}
+
+/* Menu de navigation droit */
+.menu-droit ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu-droit li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.menu-droit li a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.menu-droit i {
+    font-size: 1.2rem;
+}
+/* 
+main .contenu {
+    background: url('../img/ingenieur-informaticien-1608297187-35320.jpg');
     height: 80vh;
     position: relative;
-}
-/* main aside{
-    position: absolute;
-    top: 200px;
-    right: 0;
-    height: 100vh;
-    background-color: black;
+    flex-grow: 1;
+    padding: 20px;
+    color: white;
+    background-size: cover;
+    background-position: center;
 } */
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
 
 @media (max-width: 768px) {
     header {
@@ -129,20 +217,16 @@ main .contenu{
         height: auto;
     }
 
-    header .navbar ul .menu-item{
+    header .navbar ul .menu-item {
         border-bottom: 1px solid #eee;
     }
 
-    header .navbar.active{
+    header .navbar.active {
         display: flex;
     }
 
     header .bouton-menu {
         display: block;
-    }
-
-    .active{
-        display: flex;
     }
 
     header .navbar .menu-generale {
@@ -156,4 +240,21 @@ main .contenu{
         position: static;
         background: none;
     }
+
+    aside {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-top: 20px;
+    }
+    
+    .profil-sidebar {
+        margin-top: 0;
+    }
+    
+    .menu-droit ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
 }
