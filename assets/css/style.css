@@ -265,6 +265,10 @@ footer {
        flex-direction: column;
     }
 
+    aside .menu-droit{
+        width: 100%;
+    }
+
     .menu-droit ul {
         flex-direction: row;
         flex-wrap: wrap;
