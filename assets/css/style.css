@@ -95,6 +95,7 @@ header .navbar .menu-generale .menu-deroulant {
     display: none;
     position: absolute;
     background-color: var(--primaire-sombre);
+    border: 2px solid var(--accent-orange);
     top: 100%;
     left: 0;
     min-width: 150px;
@@ -246,7 +247,6 @@ footer {
     }
 
     header .navbar .menu-generale .menu-deroulant {
-        border: 1px solid var(--accent-orange);
         margin: 1rem;
         position: static;
         background: none;
@@ -261,6 +261,10 @@ footer {
         margin-top: 0;
     }
     
+    .magasin ul {
+       flex-direction: column;
+    }
+
     .menu-droit ul {
         flex-direction: row;
         flex-wrap: wrap;
