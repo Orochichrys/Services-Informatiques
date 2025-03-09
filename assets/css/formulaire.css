@@ -92,3 +92,10 @@
 .bouton-principal:hover {
     background-color: var(--accent-teal);
 }
+
+
+@media (max-width:768px){
+    .conteneur-inscription{
+        max-width: 400px;
+    }
+}
