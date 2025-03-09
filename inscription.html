@@ -5,74 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription - Services Informatiques</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/formulaire.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        /* Styles spécifiques à la page d'inscription */
-        .registration-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-        }
-
-        .form-tabs {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .tab-button {
-            flex: 1;
-            padding: 15px;
-            background: #333;
-            border: none;
-            color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .tab-button.active {
-            background: yellow;
-            color: black;
-        }
-
-        .form-panel {
-            display: none;
-            animation: fadeIn 0.5s;
-        }
-
-        .form-panel.active {
-            display: block;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: yellow;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            background: #333;
-            border: 1px solid #555;
-            color: white;
-            border-radius: 5px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
 </head>
+
 <body>
     <header>
         <div class="banniere">
@@ -82,7 +18,7 @@
         <button class="bouton-menu">
             <i class="bx bx-menu" id="menu-icon"></i>
         </button>
-         <nav class="navbar">
+        <nav class="navbar">
             <ul class="menu-generale">
                 <li><a href="index.html" class="menu-item">Accueil</a></li>
                 <li class="menu-item deroulant">
@@ -93,94 +29,36 @@
                         <li><a href="#">Equipe</a></li>
                     </ul>
                 </li>
-                <li class="menu-item deroulant">
-                    <a href="#">Prestations</a>
-                    <ul class="menu-deroulant">
-                        <li><a href="">Réseaux informatiques </a></li>
-                        <li><a href="">Télécommunications</a></li>
-                        <li><a href="">Genie Logiciels</a></li>
-                        <li><a href="">Intelligence économique</a></li>
-                        <li><a href="">Technologie internet </a></li>
-                        <li><a href="">Sécurité des SI</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item deroulant">
-                    <a href="#">Formations</a>
-                    <ul class="menu-deroulant">
-                        <li><a href="">Certifications </a></li>
-                        <li><a href="">Séminaires</a></li>
-                        <li><a href="">Conférences</a></li>
-                        <li><a href="">Ateliers</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item deroulant">
-                    <a href="#">Partenaires</a>
-                    <ul class="menu-deroulant">
-                        <li><a href="">Nationaux</a></li>
-                        <li><a href="">Inter nations</a></li>
-                    </ul>
-                </li>
-                <li class="menu-item deroulant">
-                    <a href="#">Support</a>
-                    <ul class="menu-deroulant">
-                        <li><a href="">Assistance</a></li>
-                        <li><a href="">Téléchargement</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" class="menu-item">Contacts</a></li>
+                <!-- Autres éléments du menu -->
             </ul>
-         </nav>
+        </nav>
     </header>
 
-    <!-- Menu latéral droit -->
-    <aside>
-        <div class="profil-sidebar">
-            <img src="assets/img/ingenieur-informaticien-1608297187-35320.jpg" alt="Profil" class="profil-image">
-            <h4>???</h4>
-            <div class="magasin">
-                <ul>
-                    <li><a href="inscription.html">Inscription</a></li>
-                    <li><a href="#">Connexion</a></li>
-                </ul>
-            </div>
-            <!-- <div class="social-links">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-            </div> -->
-        </div>
-        
-        <h3>Menu Droit</h3>
-        <nav class="menu-droit">
-        <ul>
-            <li><a href="#"><i class='bx bx-history'></i>Historique</a></li>
-            <li><a href="#"><i class='bx bx-network-chart'></i>Réseaux</a></li>
-            <li><a href="#"><i class='bx bx-certification'></i>Certifications</a></li>
-            <li><a href="#"><i class='bx bx-envelope'></i>Contact Rapide</a></li>
-        </ul>
-    </nav>
-    </aside>
-    
     <main>
-        <section class="registration-container">
-            <h2>Devenez Partenaire</h2>
+        <section class="conteneur-inscription">
+            <h2 id="titre-principal">Devenez Client</h2>
             
-            <div class="form-tabs">
-                <button class="tab-button active" onclick="switchTab('client')">Client</button>
-                <button class="tab-button" onclick="switchTab('fournisseur')">Fournisseur</button>
-                <button class="tab-button" onclick="switchTab('partenaire')">Partenaire</button>
+            <div class="onglets-formulaire">
+                <button class="bouton-onglet actif" onclick="changerOnglet('client')">Client</button>
+                <button class="bouton-onglet" onclick="changerOnglet('fournisseur')">Fournisseur</button>
+                <button class="bouton-onglet" onclick="changerOnglet('partenaire')">Partenaire</button>
             </div>
 
             <!-- Formulaire Client -->
-            <form id="client-form" class="form-panel active">
-                <div class="form-group">
-                    <label>Nom complet :</label>
-                    <input type="text" required>
+            <form id="formulaire-client" class="panneau-formulaire actif">
+                <div class="groupe-formulaire">
+                    <label for="nomClient">Nom complet :</label>
+                    <input type="text" id="nomClient" required>
                 </div>
                 
-                <div class="form-group">
-                    <label>Secteur d'activité :</label>
-                    <select required>
+                <div class="groupe-formulaire">
+                    <label for="emailClient">Email :</label>
+                    <input type="email" id="emailClient" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="secteurActivitéClient">Secteur d'activité :</label>
+                    <select id="secteurActivitéClient" required>
                         <option value="">Choisir...</option>
                         <option>Banque/Finance</option>
                         <option>Santé</option>
@@ -188,27 +66,37 @@
                     </select>
                 </div>
 
-                <button type="submit" class="cta-button">S'inscrire comme Client</button>
+                <div class="groupe-formulaire">
+                    <label for="motDePasseClient">Mot de passe :</label>
+                    <input type="password" id="motDePasseClient" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="confirmMotDePasseClient">Confirmation du mot de passe :</label>
+                    <input type="password" id="confirmMotDePasseClient" required>
+                </div>
+
+                <button type="submit" class="bouton-principal">S'inscrire comme Client</button>
             </form>
 
             <!-- Formulaire Fournisseur -->
-            <form id="fournisseur-form" class="form-panel">
-                <div class="form-group">
+            <form id="formulaire-fournisseur" class="panneau-formulaire">
+                <div class="groupe-formulaire">
                     <label>Nom de l'entreprise :</label>
                     <input type="text" required>
                 </div>
 
-                <div class="form-group">
+                <div class="groupe-formulaire">
                     <label>Type de services fournis :</label>
                     <textarea required></textarea>
                 </div>
 
-                <button type="submit" class="cta-button">S'inscrire comme Fournisseur</button>
+                <button type="submit" class="bouton-principal">S'inscrire comme Fournisseur</button>
             </form>
 
             <!-- Formulaire Partenaire -->
-            <form id="partenaire-form" class="form-panel">
-                <div class="form-group">
+            <form id="formulaire-partenaire" class="panneau-formulaire">
+                <div class="groupe-formulaire">
                     <label>Type de partenariat :</label>
                     <select required>
                         <option value="">Choisir...</option>
@@ -218,30 +106,34 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <div class="groupe-formulaire">
                     <label>Description du partenariat :</label>
                     <textarea required></textarea>
                 </div>
 
-                <button type="submit" class="cta-button">Demander un partenariat</button>
+                <button type="submit" class="bouton-principal">Demander un partenariat</button>
             </form>
         </section>
     </main>
 
     <script>
-        function switchTab(tabName) {
-            // Désactiver tous les onglets
-            document.querySelectorAll('.form-panel').forEach(panel => {
-                panel.classList.remove('active');
+        function changerOnglet(nomOnglet) {
+            // Mise à jour du titre principal
+            const titre = document.getElementById('titre-principal');
+            titre.textContent = `Devenez ${nomOnglet.charAt(0).toUpperCase() + nomOnglet.slice(1)}`;
+
+            // Désactivation de tous les onglets
+            document.querySelectorAll('.panneau-formulaire').forEach(panneau => {
+                panneau.classList.remove('actif');
             });
             
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
+            document.querySelectorAll('.bouton-onglet').forEach(bouton => {
+                bouton.classList.remove('actif');
             });
 
-            // Activer l'onglet sélectionné
-            document.getElementById(`${tabName}-form`).classList.add('active');
-            event.currentTarget.classList.add('active');
+            // Activation de l'onglet sélectionné
+            document.getElementById(`formulaire-${nomOnglet}`).classList.add('actif');
+            event.currentTarget.classList.add('actif');
         }
 
         // Gestion de la soumission des formulaires
@@ -253,6 +145,6 @@
             });
         });
     </script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/humberger.js"></script>
 </body>
 </html>

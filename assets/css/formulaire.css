@@ -1,0 +1,78 @@
+
+/* Styles spécifiques à la page d'inscription */
+.conteneur-inscription {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    /* background: rgba(255, 255, 255, 0.1); */
+    border-radius: 10px;
+}
+
+.onglets-formulaire {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bouton-onglet {
+    flex: 1;
+    padding: 15px;
+    background: var(--accent-orange);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bouton-onglet.actif {
+    background: var(--accent-cyan);
+    color: black;
+}
+
+.panneau-formulaire {
+    display: none;
+    animation: fondu-entree 0.5s;
+}
+
+.panneau-formulaire.actif {
+    display: block;
+}
+
+.groupe-formulaire {
+    margin-bottom: 15px;
+}
+
+.groupe-formulaire label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.groupe-formulaire input,
+.groupe-formulaire select,
+.groupe-formulaire textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 5px;
+}
+
+.bouton-principal {
+    background-color: var(--accent-orange);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.bouton-principal:hover{
+    background-color: var(--accent-cyan);
+    color: var(--primaire-sombre);
+}
+
+@keyframes fondu-entree {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
