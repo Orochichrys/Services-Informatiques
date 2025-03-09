@@ -39,112 +39,121 @@
             <h2 id="titre-principal">Devenez Client</h2>
             
             <div class="onglets-formulaire">
-                <button class="bouton-onglet actif" onclick="changerOnglet('client')">Client</button>
-                <button class="bouton-onglet" onclick="changerOnglet('fournisseur')">Fournisseur</button>
-                <button class="bouton-onglet" onclick="changerOnglet('partenaire')">Partenaire</button>
+            <button class="bouton-onglet actif" onclick="changerOnglet('client')">Client</button>
+            <button class="bouton-onglet" onclick="changerOnglet('fournisseur')">Fournisseur</button>
+            <button class="bouton-onglet" onclick="changerOnglet('partenaire')">Partenaire</button>
             </div>
 
             <!-- Formulaire Client -->
             <form id="formulaire-client" class="panneau-formulaire actif">
-                <div class="groupe-formulaire">
-                    <label for="nomClient">Nom complet :</label>
-                    <input type="text" id="nomClient" required>
-                </div>
-                
-                <div class="groupe-formulaire">
-                    <label for="emailClient">Email :</label>
-                    <input type="email" id="emailClient" required>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="nom-client">Nom complet :</label>
+                <input type="text" id="nom-client" required>
+            </div>
+            
+            <div class="groupe-formulaire">
+                <label for="email-client">Email :</label>
+                <input type="email" id="email-client" required>
+            </div>
 
-                <div class="groupe-formulaire">
-                    <label for="secteurActivitéClient">Secteur d'activité :</label>
-                    <select id="secteurActivitéClient" required>
-                        <option value="">Choisir...</option>
-                        <option>Banque/Finance</option>
-                        <option>Santé</option>
-                        <option>Éducation</option>
-                    </select>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="secteur-activite-client">Secteur d'activité :</label>
+                <select id="secteur-activite-client" required>
+                <option value="">Choisir...</option>
+                <option>Banque/Finance</option>
+                <option>Santé</option>
+                <option>Éducation</option>
+                </select>
+            </div>
 
-                <div class="groupe-formulaire">
-                    <label for="motDePasseClient">Mot de passe :</label>
-                    <input type="password" id="motDePasseClient" required>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="mot-de-passe-client">Mot de passe :</label>
+                <input type="password" id="mot-de-passe-client" required>
+            </div>
 
-                <div class="groupe-formulaire">
-                    <label for="confirmMotDePasseClient">Confirmation du mot de passe :</label>
-                    <input type="password" id="confirmMotDePasseClient" required>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="confirm-mot-de-passe-client">Confirmation du mot de passe :</label>
+                <input type="password" id="confirm-mot-de-passe-client" required>
+            </div>
 
-                <button type="submit" class="bouton-principal">S'inscrire comme Client</button>
+            <button type="submit" class="bouton-principal">S'inscrire comme Client</button>
             </form>
 
             <!-- Formulaire Fournisseur -->
             <form id="formulaire-fournisseur" class="panneau-formulaire">
-                <div class="groupe-formulaire">
-                    <label>Nom de l'entreprise :</label>
-                    <input type="text" required>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="nom-entreprise">Nom de l'entreprise :</label>
+                <input type="text" id="nom-entreprise" required>
+            </div>
 
-                <div class="groupe-formulaire">
-                    <label>Type de services fournis :</label>
-                    <textarea required></textarea>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="email-entreprise">Email :</label>
+                <input type="email" id="email-entreprise" required>
+            </div>
 
-                <button type="submit" class="bouton-principal">S'inscrire comme Fournisseur</button>
+            <div class="groupe-formulaire">
+                <label for="service-entreprise">Type de services fournis :</label>
+                <input type="text" id="service-entreprise" required>
+            </div>
+
+            <div class="groupe-formulaire">
+                <label for="mot-de-passe-entreprise">Mot de passe :</label>
+                <input type="password" id="mot-de-passe-entreprise" required>
+            </div>
+
+            <div class="groupe-formulaire">
+                <label for="confirm-mot-de-passe-entreprise">Confirmation du mot de passe :</label>
+                <input type="password" id="confirm-mot-de-passe-entreprise" required>
+            </div>
+
+            <button type="submit" class="bouton-principal">S'inscrire comme Fournisseur</button>
             </form>
 
             <!-- Formulaire Partenaire -->
             <form id="formulaire-partenaire" class="panneau-formulaire">
-                <div class="groupe-formulaire">
-                    <label>Type de partenariat :</label>
-                    <select required>
-                        <option value="">Choisir...</option>
-                        <option>Technologique</option>
-                        <option>Commercial</option>
-                        <option>Institutionnel</option>
-                    </select>
-                </div>
 
-                <div class="groupe-formulaire">
-                    <label>Description du partenariat :</label>
-                    <textarea required></textarea>
-                </div>
+            <div class="groupe-formulaire">
+                <label for="nom-partenaire">Nom complet :</label>
+                <input type="text" id="nom-partenaire" required>
+            </div>
+            
+            <div class="groupe-formulaire">
+                <label for="email-partenaire">Email :</label>
+                <input type="email" id="email-partenaire" required>
+            </div>
 
-                <button type="submit" class="bouton-principal">Demander un partenariat</button>
+            <div class="groupe-formulaire">
+                <label for="partenariat">Type de partenariat :</label>
+                <select id="partenariat" required>
+                <option value="">Choisir...</option>
+                <option>Technologique</option>
+                <option>Commercial</option>
+                <option>Institutionnel</option>
+                </select>
+            </div>
+
+            <div class="groupe-formulaire">
+                <label for="desc-partenariat">Description du partenariat :</label>
+                <textarea id="desc-partenariat" required></textarea>
+            </div>
+
+            <div class="groupe-formulaire">
+                <label for="mot-de-passe-partenaire">Mot de passe :</label>
+                <input type="password" id="mot-de-passe-partenaire" required>
+            </div>
+
+            <div class="groupe-formulaire">
+                <label for="confirm-mot-de-passe-partenaire">Confirmation du mot de passe :</label>
+                <input type="password" id="confirm-mot-de-passe-partenaire" required>
+            </div>
+
+            <button type="submit" class="bouton-principal">Demander un partenariat</button>
             </form>
         </section>
     </main>
 
-    <script>
-        function changerOnglet(nomOnglet) {
-            // Mise à jour du titre principal
-            const titre = document.getElementById('titre-principal');
-            titre.textContent = `Devenez ${nomOnglet.charAt(0).toUpperCase() + nomOnglet.slice(1)}`;
-
-            // Désactivation de tous les onglets
-            document.querySelectorAll('.panneau-formulaire').forEach(panneau => {
-                panneau.classList.remove('actif');
-            });
-            
-            document.querySelectorAll('.bouton-onglet').forEach(bouton => {
-                bouton.classList.remove('actif');
-            });
-
-            // Activation de l'onglet sélectionné
-            document.getElementById(`formulaire-${nomOnglet}`).classList.add('actif');
-            event.currentTarget.classList.add('actif');
-        }
-
-        // Gestion de la soumission des formulaires
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                alert('Demande envoyée avec succès !\n(NOTE: Ceci est une simulation)');
-                form.reset();
-            });
-        });
-    </script>
+   
     <script src="assets/js/humberger.js"></script>
+     <script src="assets/js/formulaire.js"></script>
 </body>
 </html>

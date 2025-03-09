@@ -1,13 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Informatiques - Connexion</title>
+    <title>Connexion - Services Informatiques</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/formulaire.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
-    
+    <header>
+        <div class="banniere">
+            <img src="assets/img/ingenieur-informaticien-1608297187-35320.jpg" alt="Logo de la société">
+            <h1>Services Informatiques</h1>
+        </div>
+        <button class="bouton-menu">
+            <i class="bx bx-menu" id="menu-icon"></i>
+        </button>
+        <nav class="navbar">
+            <ul class="menu-generale">
+                <li><a href="index.html" class="menu-item">Accueil</a></li>
+                <li class="menu-item deroulant">
+                    <a href="#">Présentation</a>
+                    <ul class="menu-deroulant">
+                        <li><a href="#">Historique</a></li>
+                        <li><a href="#">Mission</a></li>
+                        <li><a href="#">Equipe</a></li>
+                    </ul>
+                </li>
+                <!-- Autres éléments du menu -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="conteneur-inscription">
+            <h2 id="titre-principal">Connexion</h2>
+            
+            <!-- Formulaire de Connexion -->
+            <form id="formulaire-connexion" class="panneau-formulaire actif">
+                <div class="groupe-formulaire">
+                    <label for="email-connexion">Email :</label>
+                    <input type="email" id="email-connexion" required>
+                </div>
+
+                <div class="groupe-formulaire">
+                    <label for="mot-de-passe-connexion">Mot de passe :</label>
+                    <input type="password" id="mot-de-passe-connexion" required>
+                </div>
+
+                <button type="submit" class="bouton-principal">Se connecter</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="assets/js/humberger.js"></script>
 </body>
 </html>
