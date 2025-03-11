@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Informatiques</title>
+    <link rel="icon" href="assets/img/logo-test.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -14,7 +15,7 @@
     <div class="cursor"></div> -->
     <header>
         <div class="banniere">
-            <img src="assets/img/ingenieur-informaticien-1608297187-35320.jpg" alt="Logo de la société">
+            <img src="assets/img/logo-test.png" alt="Logo de la société">
             <h1>Services Informatiques</h1>
         </div>
         <button class="bouton-menu">
@@ -97,16 +98,26 @@
     <!-- Contenu principal -->
     <main>
 
-        <!-- Slider d'images -->
-        <section class="slider">
-            <img src="assets/img/slide1.jpg" alt="Services IT">
-            <img src="assets/img/slide2.jpg" alt="Formations">
-        </section>
-    
-        <!-- Section Accueil -->
+        <!-- Acceuil avec slider d'images -->
         <section id="accueil">
-            <h2>Bienvenue chez Services Informatiques</h2>
-            <p>Expert en solutions innovantes...</p>
+            <div class="slider-container">
+                <div class="slider">
+                    
+                    <div class="slide">
+                        <img src="assets/img/slider-img-1.jpg" alt="Services IT" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/slider-img-2.jpg" alt="Services IT" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/img/slider-img-3.jpg" alt="Services IT"  loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="magasin">
+                <h2>Bienvenue chez Services Informatiques</h2>
+                <p>Expert en solutions innovantes...</p>
+            </div>
         </section>
     
         <!-- Section Prestations -->
@@ -125,4 +136,5 @@
 
 </body>
 <script src="assets/js/humberger.js"></script>
+<script src="assets/js/slider.js"></script>
 </html>
