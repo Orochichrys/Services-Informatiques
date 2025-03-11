@@ -229,7 +229,7 @@ main #accueil .slider {
     display: flex;
     width: 100%; 
     height: 100%;
-    transition: transform 0.5s ease-in-out;
+    /* transition: none; */
 }
 
 main #accueil .slide {
