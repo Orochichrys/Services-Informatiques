@@ -1,10 +1,11 @@
- // Initialisation de Swiper avec les options souhaitées
- var swiper = new Swiper('.swiper-container', {
+var swiper = new Swiper('.swiper-container', {
     loop: true,
     autoplay: {
-      delay: 3000, // Délai de 3 secondes entre chaque slide
+      delay: 3000,
       disableOnInteraction: false,
     },
+    allowTouchMove: false, // Désactive le swipe/touch
+    speed: 500,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -14,3 +15,4 @@
       prevEl: '.swiper-button-prev',
     },
   });
+  
