@@ -211,59 +211,79 @@ aside {
 main section{
     z-index: 998;
 }
-
+/* S'assure que la section d'accueil est en position relative pour le positionnement de l'overlay */
 main #accueil {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-/* Styles initiaux adaptés à la structure */
+    z-index: 0; /* Contexte de pile pour le pseudo-élément */
+  }
+  
+/* Ajout d'un overlay transparent avec ::before */
+main #accueil::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh; /* Même hauteur que votre slider */
+    background: rgba(0, 0, 0, 0.3); /* Ajustez la transparence ici (0.3 = 30% opaque) */
+    z-index: 1; /* Placer l'overlay entre le slider et le contenu */
+  }
+  
+  /* Vos styles existants */
 main #accueil .slider-container {
     width: 100%;
     height: 80vh;
     overflow: hidden;
     position: relative;
-    
-}
+  }
   
 main #accueil .slider {
     display: flex;
     height: 100%;
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
+  }
   
 main #accueil .slide {
     min-width: 100%;
     height: 100%;
     flex-shrink: 0;
     position: relative;
-}
+  }
+  
   
 main #accueil .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    image-rendering: crisp-edges;    
-}
+    image-rendering: crisp-edges;
+  }
   
-/* Personnalisation des éléments Swiper */
+  /* Personnalisation des éléments Swiper */
 .swiper-pagination-bullet {
     background: #fff;
     opacity: 0.7;
-}
+  }
 .swiper-pagination-bullet-active {
     opacity: 1;
-}
-
-main #accueil .magasin{
+  }
+  
+  /* S'assurer que le contenu par-dessus l'overlay (ex: .magasin) soit bien visible */
+main #accueil .magasin {
     position: absolute;
+    z-index: 2; /* Au-dessus de l'overlay */
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 2px;
-    top:50%;
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
 
 main #accueil .magasin h2,
 main #accueil .magasin p{
