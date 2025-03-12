@@ -7,6 +7,7 @@
     <link rel="icon" href="assets/img/logo-test.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preload" href="assets/img/slider-img-1.jpg" as="image">
 </head>
 <body>
     <!-- <div class="loader">
@@ -27,7 +28,7 @@
                 <li class="menu-item deroulant">
                     <a href="#">Présentation</a>
                     <ul class="menu-deroulant">
-                        <li><a href="#">Historique</a></li>
+                        <li><a href="#historique">Historique</a></li>
                         <li><a href="#">Mission</a></li>
                         <li><a href="#">Equipe</a></li>
                     </ul>
@@ -100,34 +101,44 @@
 
         <!-- Acceuil avec slider d'images -->
         <section id="accueil">
-            <div class="slider-container">
-                <div class="slider">
-                    
-                    <div class="slide">
-                        <img src="assets/img/slider-img-1.jpg" alt="Services IT" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/slider-img-2.jpg" alt="Services IT" loading="lazy">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/slider-img-3.jpg" alt="Services IT"  loading="lazy">
-                    </div>
+            <!-- Ajout des classes Swiper tout en conservant vos classes existantes -->
+            <div class="swiper-container slider-container">
+              <div class="swiper-wrapper slider">
+                <div class="swiper-slide slide">
+                  <img src="assets/img/slider-img-1.jpg" alt="Services IT" loading="lazy">
                 </div>
+                <div class="swiper-slide slide">
+                  <img src="assets/img/slider-img-2.jpg" alt="Services IT" loading="lazy">
+                </div>
+                <div class="swiper-slide slide">
+                  <img src="assets/img/slider-img-3.jpg" alt="Services IT" loading="lazy">
+                </div>
+              </div>
+              <!-- Pagination optionnelle -->
+              <div class="swiper-pagination"></div>
+              <!-- Boutons de navigation optionnels -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
             <div class="magasin">
-                <h2>Bienvenue chez Services Informatiques</h2>
-                <p>Expert en solutions innovantes...</p>
+              <h2>Bienvenue chez Services Informatiques</h2>
+              <p>Expert en solutions innovantes...</p>
             </div>
-        </section>
+          </section>
     
+         <!-- Section Presentation -->
+          <!-- <section>
+
+          </section> -->
+
         <!-- Section Prestations -->
-        <!-- <section id="prestations">
+        <section id="prestations">
             <h2>Nos Prestations</h2>
             <div class="carte-prestation">
                 <h3>Réseaux Informatiques</h3>
                 <p>Audit et déploiement de solutions...</p>
             </div>
-        </section> -->
+        </section> 
     </main>
 
     <footer>
@@ -136,5 +147,6 @@
 
 </body>
 <script src="assets/js/humberger.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="assets/js/slider.js"></script>
 </html>

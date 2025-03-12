@@ -218,31 +218,57 @@ main #accueil {
     align-items: center;
     text-align: center;
 }
+/* Styles initiaux adaptés à la structure */
 main #accueil .slider-container {
     width: 100%;
     height: 80vh;
     overflow: hidden;
     position: relative;
 }
-
+  
 main #accueil .slider {
     display: flex;
-    width: 100%; 
     height: 100%;
-    /* transition: none; */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+  
 main #accueil .slide {
-    min-width: 100%; 
+    min-width: 100%;
     height: 100%;
     flex-shrink: 0;
+    position: relative;
 }
-
+  
 main #accueil .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
+    object-fit: cover;
     object-position: center;
+    image-rendering: crisp-edges;
+      
+}
+  
+/* Personnalisation des éléments Swiper */
+.swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.7;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+main #accueil .magasin{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 2px;
+    top:50%;
+}
+
+main #accueil .magasin h2,
+main #accueil .magasin p{
+    font-size: bold;
+    color: white;
 }
 
 footer {
@@ -257,6 +283,10 @@ footer {
     header {
         flex-direction: row;
         justify-content: space-between;
+    }
+    
+    header .banniere{
+        gap: 10px;
     }
 
     header .navbar {
