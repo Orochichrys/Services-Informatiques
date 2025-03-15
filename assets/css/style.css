@@ -290,6 +290,115 @@ main #accueil .magasin p{
     font-size: bold;
     color: white;
 }
+/* 
+#presentation{
+    padding-block: 10rem;
+} */
+
+/* Section Présentation */
+#presentation {
+    padding: 60px 20px;
+    background-color: var(--primaire-léger);
+    color: var(--texte-primaire);
+    text-align: center;
+  }
+  
+  #presentation h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenu de la présentation */
+  .presentation-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .presentation-item {
+    background-color: rgba(10, 25, 47, 0.85);
+    padding: 20px;
+    border: 2px solid var(--accent-orange);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .presentation-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .presentation-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .presentation-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .presentation-content {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+  
+/* Section Prestations */
+#prestations {
+  padding: 60px 20px;
+  background-color: var(--primaire-moyen);
+  color: var(--texte-primaire);
+  text-align: center;
+}
+
+#prestations h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Conteneur en grille pour les cartes de prestations */
+.prestations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Style pour chaque carte */
+.prestation-item {
+  background-color: rgba(10, 25, 47, 0.85);
+  padding: 20px;
+  border: 2px solid var(--accent-orange);
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.prestation-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.prestation-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.prestation-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.prestation-item:hover {
+  transform: translateY(-5px);
+}
+
 
 footer {
     background-color: var(--primaire-sombre);
