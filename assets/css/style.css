@@ -290,115 +290,197 @@ main #accueil .magasin p{
     font-size: bold;
     color: white;
 }
-/* 
-#presentation{
-    padding-block: 10rem;
-} */
 
-/* Section Présentation */
-#presentation {
-    padding: 60px 20px;
-    background-color: var(--primaire-léger);
-    color: var(--texte-primaire);
-    text-align: center;
-  }
-  
-  #presentation h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  /* Contenu de la présentation */
-  .presentation-content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .presentation-item {
-    background-color: rgba(10, 25, 47, 0.85);
-    padding: 20px;
-    border: 2px solid var(--accent-orange);
-    border-radius: 5px;
-    width: 100%;
-    max-width: 350px;
-  }
-  
-  .presentation-item h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-  
-  .presentation-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-  }
-  
-  .presentation-item p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  @media (min-width: 768px) {
-    .presentation-content {
-      flex-direction: row;
-      justify-content: space-around;
-    }
-  }
-  
-/* Section Prestations */
-#prestations {
-  padding: 60px 20px;
-  background-color: var(--primaire-moyen);
-  color: var(--texte-primaire);
-  text-align: center;
+/* Styles généraux des sections */
+.content-section {
+  padding: 10rem 0;
 }
 
-#prestations h2 {
+#historique, #equipe{background-color: var(--primaire-moyen);}
+#mission{background-color: var(--primaire-léger);}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.content-section h2 {
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  color: var(--accent-cyan);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
 }
 
-/* Conteneur en grille pour les cartes de prestations */
-.prestations-container {
+.content-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-orange);
+  margin: 1rem auto;
+}
+
+/* Historique */
+.history-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 }
 
-/* Style pour chaque carte */
-.prestation-item {
-  background-color: rgba(10, 25, 47, 0.85);
-  padding: 20px;
-  border: 2px solid var(--accent-orange);
-  border-radius: 5px;
+.history-card {
+  background: var(--primaire-sombre);
+  padding: 2rem;
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
-.prestation-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.prestation-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.prestation-item p {
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.prestation-item:hover {
+.history-card:hover {
   transform: translateY(-5px);
 }
 
+.history-card i {
+  font-size: 2.5rem;
+  color: var(--accent-orange);
+  margin-bottom: 1rem;
+  display: block;
+}
+.history-card h3,
+.mission-vision h3,
+.mission-values h3{
+  color: var(--texte-primaire);
+  transition: color 0.3s ease;
+}
+
+.history-card:hover h3{
+  color: var(--accent-cyan);
+}
+.mission-vision:hover h3{
+  color: var(--accent-orange);
+}
+
+.mission-values li:hover{
+  color: var(--accent-cyan);
+}
+
+.history-card p, .mission-vision p{
+  color: var(--texte-secondaire);
+}
+/* Mission */
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.mission-vision {
+  background: linear-gradient(to right bottom, var(--primaire-sombre), var(--primaire-léger));
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.mission-vision i {
+  font-size: 3rem;
+  color: var(--accent-teal);
+}
+
+.mission-values ul {
+  list-style: none;
+}
+
+.mission-values li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: rgba(255,255,255,0.05);
+  color: var(--texte-secondaire);
+  border-left: 3px solid var(--accent-orange);
+}
+
+/* Équipe */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  text-align: center;
+  background: var(--primaire-sombre);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--accent-cyan);
+}
+
+.role {
+  color: var(--texte-secondaire);
+  margin: 0.5rem 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: var(--texte-primaire);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-orange);
+}
+
+/* Prestations */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background: var(--primaire-sombre);
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: var(--accent-teal);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .history-card, .service-card {
+    padding: 1.5rem;
+  }
+  
+  .content-section h2 {
+    font-size: 2rem;
+  }
+}
 
 footer {
     background-color: var(--primaire-sombre);
